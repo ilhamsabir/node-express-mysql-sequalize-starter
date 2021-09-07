@@ -60,28 +60,28 @@ Each Product will have the properties
 ./root
   ├── ...
   ├── config                    # This directory contains all configuration files
-  │   ├── db.js				          # database config
+  │   ├── db.js                 # database config
   │   └── ...
-  ├── controller                # Test files (alternatively `spec` or `tests`
-  │   ├── UserController.js		  # User Controller
+  ├── controller                # Controller file go here
+  │   ├── UserController.js		# User Controller
   │   └── ProductController.js	# Product Controller
   ├── model                     # Model definitions go here.
-  │   ├── User.js				        # User Model
-  │   ├── Product.js				    # Product Model
+  │   ├── User.js				# User Model
+  │   ├── Product.js			# Product Model
   │   └── ...
-  ├── lib							          # Custom Library files go in this folder
-  │   ├── helper.js				      # Helper lib file
-  │   ├── client.js				      # External http request
+  ├── lib					    # Custom Library files go in this folder
+  │   ├── helper.js	            # Helper lib file
+  │   ├── client.js				# External http request
   │   └── ...
-  ├── docs							        # Document folder go here (Swagger)
-  │   ├── index.json				    # Document using swagger
+  ├── docs						# Document folder go here (Swagger)
+  │   ├── index.json			# Document using swagger
   │   └── ...
-  ├── .babelrc				          # Babel preset here
-  ├── .editorconfig				      # Editor config analysis config
-  ├── .gitignore				        # Git ignore anything
-  ├── .env					            # Environment depending configs go here in respective files
-  ├── app.js					          # Main file with setup and configuration for Express
-  ├── package.json			        # List of project dependencies
+  ├── .babelrc				    # Babel preset here
+  ├── .editorconfig				# Editor config analysis config
+  ├── .gitignore				# Git ignore anything
+  ├── .env					    # Environment depending configs go here in respective files
+  ├── app.js					# Main file with setup and configuration for Express
+  ├── package.json			    # List of project dependencies
   └── ...
 ```
 

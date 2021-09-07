@@ -164,3 +164,9 @@ We are using the following plugins to statically analysis our code
 ## Stay in touch
 - Author - [Ilham Sabir](https://ilhamsabir.github.io)
 - Twitter - [@ilhamsabir](https://twitter.com/ilhamsabir)
+
+
+
+
+
+<p align="center" style="margin-top: 100px"><a href="https://ko-fi.com/ilhamsabir" target="_blank"><img src="https://camo.githubusercontent.com/146bc1e206ca6a7df35a73b693f75f2162063633/68747470733a2f2f617a3734333730322e766f2e6d7365636e642e6e65742f63646e2f6b6f6669322e706e673f763d32" width="400"></a></p>

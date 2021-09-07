@@ -54,7 +54,7 @@ Each Product will have the properties
 - `createdAt: varchart`.
 - `updatedAt: varchart`.
 
-### Folder structure
+## Folder structure
 
 ```bash
 ./root
@@ -82,7 +82,7 @@ Each Product will have the properties
 ```
 
 
-### API examples
+## API examples
 
 - A <span style="color: green">success</span> response
 

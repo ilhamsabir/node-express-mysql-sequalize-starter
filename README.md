@@ -58,6 +58,15 @@ Each Product will have the properties
 
 ```bash
 ./root
+.
+  ├── ...
+  ├── config                    # Test files (alternatively `spec` or `tests`
+  │   └── db.js                # Unit tests
+  ├── controller                    # Test files (alternatively `spec` or `tests`
+  │   ├── integration         # End-to-end, integration tests (alternatively `e2e`)
+  │   └── unit                # Unit tests
+  └── ...
+
 └─│
 	config						          # This directory contains all configuration files
   │ └── db.js					        # database config

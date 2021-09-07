@@ -58,35 +58,27 @@ Each Product will have the properties
 
 ```bash
 ./root
-.
   ├── ...
-  ├── config                    # Test files (alternatively `spec` or `tests`
-  │   └── db.js                # Unit tests
-  ├── controller                    # Test files (alternatively `spec` or `tests`
-  │   ├── integration         # End-to-end, integration tests (alternatively `e2e`)
-  │   └── unit                # Unit tests
+  ├── config                    # This directory contains all configuration files
+  │   └── db.js					        # database config
+  ├── controller                # Test files (alternatively `spec` or `tests`
+  │   ├── UserController.js		  # User Controller
+  │   └── ProductController.js	# Product Controller
+  ├── model                     # Model definitions go here.
+  │   ├── User.js				        # User Model
+  │   └── Product.js			      # Product Model
+  ├── lib							          # Custom Library files go in this folder
+  │   ├── helper.js				      # Helper lib file
+  │   └── client.js				      # External http request
+  ├── docs							        # Document folder go here (Swagger)
+  │   └── index.json				    # Document using swagger
+  ├── .babelrc				          # Babel preset here
+  ├── .editorconfig				      # Editor config analysis config
+  ├── .gitignore				        # Git ignore anything
+  ├── .env					            # Environment depending configs go here in respective files
+  ├── app.js					          # Main file with setup and configuration for Express
+  ├── package.json			        # List of project dependencies
   └── ...
-
-└─│
-	config						          # This directory contains all configuration files
-  │ └── db.js					        # database config
-  controllers					        # Controller definitions go here.
-	│ ├── UserController.js		  # User Controller
-  │ └── ProductController.js	# Product Controller
-  model						            # Model definitions go here.
-  │ ├── User.js				        # User Model
-  │ └── Product.js			      # Product Model
-	lib							            # Custom Library files go in this folder
-  │ ├── helper.js				      # Helper lib file
-  │ └── client.js				      # External http request
-	routes						          # Routes definitons go here
-  │ └── index.js				      # All api route declarations go here.
-	└── .babelrc				        # Babel preset here
-	└── .editorconfig				    # Editor config analysis config
-	└── .gitignore				      # Git ignore anything
-	└── .env					          # Environment depending configs go here in respective files
-	└── app.js					        # Main file with setup and configuration for Express
-	└── package.json			      # List of project dependencies
 ```
 
 

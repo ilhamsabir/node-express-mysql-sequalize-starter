@@ -2,16 +2,23 @@
 import Products from '../model/Products';
 import {
 	resCallback,
+	resCallbackPagination,
+	globalGetParams
 } from '../lib/helper'
 
 // Get semua product
 exports.get = async (req, res) => {
 	try {
-		const product = await Products.findAll();
-		if (product && product.length > 0) {
+		const query = req.query
+		const page = parseInt(query.page)
+		const limit = parseInt(query.limit)
+		const params = globalGetParams(query, 'name')
+		const product = await Products.findAndCountAll(params);
+		if (product) {
+			const response = resCallbackPagination(product, page, limit)
 			res
 				.status(200)
-				.send(resCallback(product, 200, 'success'));
+				.send(response);
 		} else {
 			res
 				.status(404)

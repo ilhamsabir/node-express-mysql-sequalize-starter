@@ -2,14 +2,14 @@
     "swagger": "2.0",
     "info": {
       "version": "1.0.0",
-      "title": "My User Project CRUD",
-      "description": "My User Project Application API",
+      "title": "Node Express MySQL Sequalize",
+      "description": "Starter API for Node Express use MySQL database with Sequalize ORM",
       "license": {
         "name": "MIT",
         "url": "https://opensource.org/licenses/MIT"
       }
     },
-    "host": "localhost:8000",
+    "host": "localhost:3001",
     "basePath": "/",
     "tags": [
       {
@@ -27,7 +27,7 @@
       "application/json"
     ],
     "paths": {
-      "/addUser": {
+      "/user": {
         "post": {
           "tags": [
             "Users"

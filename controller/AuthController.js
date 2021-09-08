@@ -1,6 +1,6 @@
 import bcrypt from 'bcryptjs'
 import jwt from 'jsonwebtoken'
-import User from '../model/User'
+import User from '../model/user'
 import { resCallback } from '../lib/helper'
 require('dotenv').config();
 
@@ -43,6 +43,7 @@ exports.register = async (req, res) => {
 				email: payload.email
 			}
 		});
+		// console.log('existedUser: ', existedUser);
 
 		if (existedUser.length > 0) {
 			res
@@ -50,6 +51,7 @@ exports.register = async (req, res) => {
 				.send(resCallback('', 404, 'email already registered'));
 		} else {
 			const user = await User.create(payload);
+			console.log('user: ', user);
 			if (user) {
 				return signin(res, user, password);
 			} else {

@@ -1,5 +1,5 @@
 // Import model Product
-import Products from '../model/Products';
+import Products from '../model/product';
 import {
 	resCallback,
 	resCallbackPagination,

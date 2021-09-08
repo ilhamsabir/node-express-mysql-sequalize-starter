@@ -1,5 +1,4 @@
-import bcrypt from 'bcryptjs'
-import Users from '../model/User';
+import Users from '../model/user';
 import {
 	resCallback,
 } from '../lib/helper'

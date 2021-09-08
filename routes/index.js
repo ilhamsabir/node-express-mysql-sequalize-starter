@@ -1,10 +1,12 @@
 import express from 'express'
 import ProductController from '../controller/ProductController'
-// import UserController from '../controller/UserController'
+import UserController from '../controller/UserController'
 import AuthController from '../controller/AuthController'
 import Auth from '../config/auth'
 const api = express.Router();
 const Guard = Auth.authenticate('jwt', { session: false })
+
+api.route('/users').get(UserController.get);
 
 api.route('/products').get(Guard , ProductController.get);
 api.route('/product/:id').get(Guard, ProductController.getDetail);

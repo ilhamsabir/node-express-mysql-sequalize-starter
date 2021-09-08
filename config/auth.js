@@ -1,6 +1,6 @@
 import passport from 'passport'
 import passportJWT from 'passport-jwt'
-import User from '../model/User'
+import User from '../model/user'
 require('dotenv').config();
 
 let ExtractJwt = passportJWT.ExtractJwt;

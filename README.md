@@ -92,6 +92,61 @@ Each Product will have the properties
 ```
 
 
+## Migrations
+Use Sequalize migration.
+- Install sequalize
+  ```bash
+    npm install --save-dev sequelize-cli
+  ```
+- Go to root folder database
+  ```bash
+    # Migration locate at folder "database".
+    cd ./database
+  ```
+- Create config initialize, config file location at 'config/config.json'
+  ```bash
+    npx sequelize-cli init
+  ```
+- Create model config
+  ```bash
+    # sample user migration
+    npx sequelize-cli model:generate --name User --attributes name:string,email:string
+  ```
+- Run migration
+  ```bash
+    npx sequelize-cli db:migrate
+  ```
+- Create seeds
+  ```bash
+    npx sequelize-cli seed:generate --name demo-user
+  ```
+- Sample seeds
+  ```js
+    module.exports = {
+      up: (queryInterface, Sequelize) => {
+        return queryInterface.bulkInsert('Users', [{
+          firstName: 'John',
+          lastName: 'Doe',
+          email: 'example@example.com',
+          createdAt: new Date(),
+          updatedAt: new Date()
+        }]);
+      },
+      down: (queryInterface, Sequelize) => {
+        return queryInterface.bulkDelete('Users', null, {});
+      }
+    };
+  ```
+- Running Seed
+  ```bash
+    # run all seed
+    npx sequelize-cli db:seed:all
+
+    # run undo specific seed
+    npx sequelize-cli db:seed:undo --seed name-of-seed-as-in-data
+  ```
+- For more documentation visit [Sequalize](https://sequelize.org/master/manual/migrations.html).
+
 ## API examples
 
 - A <span style="color: green">success</span> response

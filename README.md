@@ -16,6 +16,9 @@ It's is recommended before start to have a basic knowledge about the following
 - [Dotenv](https://github.com/motdotla/dotenv)
 - [MySql2](https://github.com/sidorares/node-mysql2)
 - [Cors](https://github.com/expressjs/cors)
+- [Passport](http://www.passportjs.org/)
+- [JsonWebToken](https://github.com/auth0/node-jsonwebtoken)
+- [Bcrypt](https://github.com/dcodeIO/bcrypt.js)
 - [Swagger](https://swagger.io/)
 - [Swagger UI Express](https://github.com/scottie1984/swagger-ui-express)
 - [Json API](https://jsonapi.org/) with [examples](https://jsonapi.org/examples/) (optional).
@@ -60,11 +63,14 @@ Each Product will have the properties
 ./root
   ├── ...
   ├── config                    # This directory contains all configuration files
+  │   ├── auth.js                 # auth passport config
   │   ├── db.js                 # database config
   │   └── ...
   ├── controller                # Controller file go here
+  │   ├── AuthController.js		# Auth Controller
   │   ├── UserController.js		# User Controller
-  │   └── ProductController.js	# Product Controller
+  │   ├── ProductController.js		# Product Controller
+  │   └── ...
   ├── model                     # Model definitions go here.
   │   ├── User.js				# User Model
   │   ├── Product.js			# Product Model

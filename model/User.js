@@ -14,6 +14,12 @@ const Users = db.define('users', {
 		type: Sequelize.UUID,
 		defaultValue: Sequelize.UUIDV1
 	},
+	email: {
+		type: DataTypes.STRING
+	},
+	password: {
+		type: DataTypes.STRING
+	},
 	name: {
 		type: DataTypes.STRING
 	},

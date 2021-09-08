@@ -1,3 +1,4 @@
+import bcrypt from 'bcryptjs'
 import Users from '../model/User';
 import {
 	resCallback,
@@ -53,6 +54,7 @@ exports.create = async (req, res) => {
 	try {
 		const payload = req.body
 		const user = await Users.create(payload);
+
 		if (user) {
 			res
 				.status(200)
